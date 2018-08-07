@@ -1,0 +1,19 @@
+{
+    "name": "frostiede/composer-dependency-list",
+    "description": "Lists all Composer dependencies.",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcel Marnitz",
+            "email": "marcelmarnitz@googlemail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "FrostieDE\\ComposerDependencyList\\": "./src/FrostieDE/ComposerDependencyList"
+        }
+    }
+}
