@@ -60,10 +60,13 @@ class ComposerDependenciesResolver implements ComposerDependenciesResolverInterf
 
             if(isset($package->authors)) {
                 foreach ($package->authors as $a) {
-                    $author = (new Author())
-                        ->setName($a->name);
+                    $author = new Author();
 
-                    if(isset($a->email)) {
+                    if (isset($a->name)) {
+                        $author->setName($a->name);
+                    }
+
+                    if (isset($a->email)) {
                         $author->setEmail($a->email);
                     }
 
