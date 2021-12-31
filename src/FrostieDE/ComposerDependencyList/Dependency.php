@@ -4,101 +4,50 @@ namespace FrostieDE\ComposerDependencyList;
 
 class Dependency {
 
-    /**
-     * @var string
-     */
-    private $name;
-
-    /**
-     * @var string
-     */
-    private $url;
-
-    /**
-     * @var string
-     */
-    private $description;
-
-    /**
-     * @var string
-     */
-    private $version;
+    private string $name;
+    private ?string $url;
+    private ?string $description;
+    private string $version;
 
     /**
      * @var Author[]
      */
-    private $authors = [ ];
+    private array $authors = [ ];
+    private ?string $licenseType;
+    private ?string $licensePath;
 
-    /**
-     * @var string
-     */
-    private $licenseType;
-
-    /**
-     * @var string
-     */
-    private $licensePath;
-
-    /**
-     * @return string
-     */
-    public function getName() {
+    public function getName(): string {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     * @return Dependency
-     */
-    public function setName($name) {
+    public function setName(string $name): static {
         $this->name = $name;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getUrl() {
+    public function getUrl(): ?string {
         return $this->url;
     }
 
-    /**
-     * @param string $url
-     * @return Dependency
-     */
-    public function setUrl($url) {
+    public function setUrl(?string $url): static {
         $this->url = $url;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getDescription() {
+    public function getDescription(): ?string {
         return $this->description;
     }
 
-    /**
-     * @param string $description
-     * @return Dependency
-     */
-    public function setDescription($description) {
+    public function setDescription(?string $description): static {
         $this->description = $description;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getVersion() {
+    public function getVersion(): string {
         return $this->version;
     }
 
-    /**
-     * @param string $version
-     * @return Dependency
-     */
-    public function setVersion($version) {
+    public function setVersion(string $version): static {
         $this->version = $version;
         return $this;
     }
@@ -106,47 +55,29 @@ class Dependency {
     /**
      * @return Author[]
      */
-    public function getAuthors() {
+    public function getAuthors(): array {
         return $this->authors;
     }
 
-    /**
-     * @param Author[] $authors
-     * @return Dependency
-     */
-    public function addAuthor(Author $author) {
+    public function addAuthor(Author $author): static {
         $this->authors[] = $author;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getLicenseType() {
+    public function getLicenseType(): ?string {
         return $this->licenseType;
     }
 
-    /**
-     * @param string $licenseType
-     * @return Dependency
-     */
-    public function setLicenseType($licenseType) {
+    public function setLicenseType(?string $licenseType): static {
         $this->licenseType = $licenseType;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getLicensePath() {
+    public function getLicensePath(): ?string {
         return $this->licensePath;
     }
 
-    /**
-     * @param string $licensePath
-     * @return Dependency
-     */
-    public function setLicensePath($licensePath) {
+    public function setLicensePath(?string $licensePath): static {
         $this->licensePath = $licensePath;
         return $this;
     }

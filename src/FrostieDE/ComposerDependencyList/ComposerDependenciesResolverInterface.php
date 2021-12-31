@@ -7,5 +7,5 @@ interface ComposerDependenciesResolverInterface {
     /**
      * @return Dependency[]
      */
-    public function getDependencies();
+    public function getDependencies(): array;
 }

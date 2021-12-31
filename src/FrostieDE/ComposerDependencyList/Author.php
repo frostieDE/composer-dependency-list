@@ -4,44 +4,23 @@ namespace FrostieDE\ComposerDependencyList;
 
 class Author {
 
-    /**
-     * @var string
-     */
-    private $name;
+    private ?string $name;
+    private ?string $email;
 
-    /**
-     * @var string
-     */
-    private $email;
-
-    /**
-     * @return string
-     */
-    public function getName() {
+    public function getName(): ?string {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     * @return Author
-     */
-    public function setName($name) {
+    public function setName(?string $name): static {
         $this->name = $name;
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getEmail() {
+    public function getEmail(): ?string {
         return $this->email;
     }
 
-    /**
-     * @param string $email
-     * @return Author
-     */
-    public function setEmail($email) {
+    public function setEmail(?string $email): static {
         $this->email = $email;
         return $this;
     }
