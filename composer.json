@@ -1,7 +1,7 @@
 {
     "name": "frostiede/composer-dependency-list",
     "description": "Lists all Composer dependencies.",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "type": "library",
     "license": "MIT",
     "authors": [
