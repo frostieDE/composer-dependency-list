@@ -4,8 +4,8 @@ namespace FrostieDE\ComposerDependencyList;
 
 class Author {
 
-    private ?string $name;
-    private ?string $email;
+    private ?string $name = null;
+    private ?string $email = null;
 
     public function getName(): ?string {
         return $this->name;

@@ -5,16 +5,16 @@ namespace FrostieDE\ComposerDependencyList;
 class Dependency {
 
     private string $name;
-    private ?string $url;
-    private ?string $description;
+    private ?string $url = null;
+    private ?string $description = null;
     private string $version;
 
     /**
      * @var Author[]
      */
     private array $authors = [ ];
-    private ?string $licenseType;
-    private ?string $licensePath;
+    private ?string $licenseType = null;
+    private ?string $licensePath = null;
 
     public function getName(): string {
         return $this->name;
