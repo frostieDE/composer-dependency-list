@@ -20,7 +20,7 @@ class Dependency {
         return $this->name;
     }
 
-    public function setName(string $name): static {
+    public function setName(string $name): Dependency {
         $this->name = $name;
         return $this;
     }
@@ -29,7 +29,7 @@ class Dependency {
         return $this->url;
     }
 
-    public function setUrl(?string $url): static {
+    public function setUrl(?string $url): Dependency {
         $this->url = $url;
         return $this;
     }
@@ -38,7 +38,7 @@ class Dependency {
         return $this->description;
     }
 
-    public function setDescription(?string $description): static {
+    public function setDescription(?string $description): Dependency {
         $this->description = $description;
         return $this;
     }
@@ -47,7 +47,7 @@ class Dependency {
         return $this->version;
     }
 
-    public function setVersion(string $version): static {
+    public function setVersion(string $version): Dependency {
         $this->version = $version;
         return $this;
     }
@@ -59,7 +59,7 @@ class Dependency {
         return $this->authors;
     }
 
-    public function addAuthor(Author $author): static {
+    public function addAuthor(Author $author): Dependency {
         $this->authors[] = $author;
         return $this;
     }
@@ -68,7 +68,7 @@ class Dependency {
         return $this->licenseType;
     }
 
-    public function setLicenseType(?string $licenseType): static {
+    public function setLicenseType(?string $licenseType): Dependency {
         $this->licenseType = $licenseType;
         return $this;
     }
@@ -77,7 +77,7 @@ class Dependency {
         return $this->licensePath;
     }
 
-    public function setLicensePath(?string $licensePath): static {
+    public function setLicensePath(?string $licensePath): Dependency {
         $this->licensePath = $licensePath;
         return $this;
     }

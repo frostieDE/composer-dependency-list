@@ -11,7 +11,7 @@ class Author {
         return $this->name;
     }
 
-    public function setName(?string $name): static {
+    public function setName(?string $name): Author {
         $this->name = $name;
         return $this;
     }
@@ -20,7 +20,7 @@ class Author {
         return $this->email;
     }
 
-    public function setEmail(?string $email): static {
+    public function setEmail(?string $email): Author {
         $this->email = $email;
         return $this;
     }
